@@ -1,20 +1,30 @@
 /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
   min-height: 100vh;
   background: rgba(245, 245, 239, 0.33);
   font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Main Container */
 .custom-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1000px;
-  min-height: 10vh; 
-  margin: auto; /* Centers horizontally */
+  width: 80%;
+  min-height: 90vh; /* Ensures it fills most of the viewport */
   background: var(--white);
   padding: 20px;
+  margin: auto;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -32,14 +42,13 @@ body {
   width: 127.68px;
   height: 120px;
   position: absolute;
-  top: 5px;
+  top: 10%;
 }
 
 .custom-illustration img {
   width: 75%;
-  margin-top: 40px;
+  margin-top: 80px;
   border-radius: 29px;
-  background: var(--secondary-bg);
   margin-left: 45px;
 }
 
@@ -52,6 +61,7 @@ body {
   justify-content: center;
   position: relative;
 }
+
 .custom-logo-pos-right {
   display: none;
 }
@@ -68,9 +78,7 @@ body {
   margin-bottom: 20px;
   background-color: rgba(236, 182, 95, 0.518);
   border-radius: 33px;
-  padding-block: 7.5px;
-  padding-inline-end: 10px;
-  padding-inline-start: 10px;
+  padding: 7.5px 10px;
 }
 
 .custom-buttons button {
@@ -86,8 +94,7 @@ body {
 
 .custom-buttons button:hover {
   background-color: var(--accent-color);
-  transition: cubic-bezier(1, 0, 0, 1);
-  transition-duration: 0.5s;
+  transition: 0.5s cubic-bezier(1, 0, 0, 1);
 }
 
 .custom-login {
@@ -116,29 +123,15 @@ label {
   color: #000;
   margin-bottom: 5px;
 }
-
-input {
-  width: 100%;
-  height: 30px;
-  border: 1px solid var(--accent-color);
-  border-radius: 40px;
-  padding: 10px;
-  font-size: var(--font-size-small);
-  color: #acacac;
-  margin-bottom: 20px;
-  font-family: var(--font-family);
-}
-
-/* New Styles for Password Input Group */
 .custom-input-group {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.custom-form-control {
+input {
   width: 100%;
-  height: 30px;
+  height: 50px;
   border: 1px solid var(--accent-color);
   border-radius: 40px;
   padding: 10px;
@@ -146,13 +139,15 @@ input {
   color: #acacac;
   margin-bottom: 20px;
   font-family: var(--font-family);
-  padding-right: 40px;
 }
+
+
 
 .custom-eye-btn {
   position: absolute;
-  right: 10px;
-  top: 15px;
+  right: 12px;
+  top: 37%;
+  transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
@@ -161,23 +156,26 @@ input {
   font-size: 20px;
 }
 
+/* Options */
 .custom-options {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
   color: #000;
-  align-items: center; /* Ensures vertical alignment */
+  align-items: center;
 }
 
 .custom-check-box {
   display: flex;
-  gap: 5px; /* Adds spacing between checkbox and label */
+  margin-top: 15px;
+  gap: 10px;
 }
 
 .custom-check-box input[type="checkbox"] {
   transform: scale(2); /* Shrinks the checkbox */
   width: 12px;
   height: 12px;
+  margin-top: 3px;
   cursor: pointer;
 }
 
@@ -185,7 +183,7 @@ input {
   color: #000;
 }
 
-
+/* Login Button */
 .custom-login-btn {
   width: 232px;
   height: 49px;
@@ -200,31 +198,25 @@ input {
 }
 
 p {
-  font-size: 10px;
+  font-size: 10px;  
   color: #000;
-  margin-left: auto;
-  margin-right: 8.5%;
+  margin-left: auto ;
+  margin-right: 10px;
+  padding-top: 10px;
 }
 
 p a {
   color: var(--accent-color);
 }
 
-/* 📌 Responsive Styles for Smaller Screens */
-/* @media screen and (max-width: 1090px) {
-  .custom-container {
-    width: 90%;
-  }
-
+/* Responsive Styles */
+@media screen and (max-width: 1090px) {
+  
   form {
     width: 90%;
-    display: flex;
-    flex-direction: column;
   }
 
-  .input-width {
-    width: 93.3%;
-  }
+
 
   .custom-login-btn {
     width: 200px;
@@ -234,6 +226,7 @@ p a {
     width: 90%;
     margin-left: 10px;
   }
+
   .custom-container {
     width: 85%;
     padding: 15px;
@@ -253,9 +246,9 @@ p a {
     margin: auto;
     padding-top: 10px;
   }
-} */
+}
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   h3 {
     display: none;
   }
@@ -263,8 +256,6 @@ p a {
   .custom-left-section {
     display: none;
   }
-
-
 
   .custom-right-section {
     width: 100%;
@@ -293,14 +284,14 @@ p a {
     max-width: 350px;
     margin: 0 auto;
   }
+  label {
+    display: block;
+    text-align: left;
+    
+}
 
   input {
     width: 100%;
-  }
-
-  .custom-eye-btn {
-    right: 15px;
-    top: 10px;
   }
 
   .custom-login-btn {
@@ -308,10 +299,9 @@ p a {
     max-width: 280px;
     height: 45px;
     font-size: var(--font-size-medium);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto 0;
+    display: block;
   }
-
 
   .custom-container {
     width: 80%;
@@ -324,4 +314,27 @@ p a {
     font-size: var(--font-size-small);
     margin-bottom: 30px;
   }
-} */
+}
+
+@media screen and (max-width: 480px) {
+  label{
+    font-size: var(--font-size-small);
+  }
+  /* Options */
+
+.custom-check-box {
+  display: flex;
+  gap: 10px;
+}
+
+.custom-check-box input[type="checkbox"] {
+  width: 8px;
+}
+
+  .custom-options a{
+    font-size: 10px;
+  }
+  .custom-login-btn{
+    width: 150px;
+  }
+}
