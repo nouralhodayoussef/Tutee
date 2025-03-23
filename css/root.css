@@ -1,0 +1,14 @@
+:root {
+  /* Colors */
+  --primary-bg: #fcfcfa; /* Off-White */
+  --secondary-bg: #f5f5ef; /* Light Beige */
+  --text-color: #9a9796; /* Gray */
+  --accent-color: #e8b14f; /* Golden Yellow */
+  --white: #ffffff; /* Pure White */
+
+  /* Fonts */
+  --font-family: "Poppins", sans-serif;
+  --font-size-large: 24px;
+  --font-size-medium: 14px;
+  --font-size-small: 13px;
+}
