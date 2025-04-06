@@ -4,7 +4,8 @@
   --secondary-bg: #f5f5ef; /* Light Beige */
   --text-color: #9a9796; /* Gray */
   --accent-color: #e8b14f; /* Golden Yellow */
-  --white: #ffffff; /* Pure White */
+  --white: #ffffff;
+  --black: #000; /* Pure black */
 
   /* Fonts */
   --font-family: "Poppins", sans-serif;

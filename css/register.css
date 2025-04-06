@@ -1,21 +1,36 @@
-@import url('root.css');
-body {
-  position: relative;
-  height: 100vh;
-  background: rgba(245, 245, 239, 0.33);
-  font-family: var(--font-family);
+@import url("root.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.custom-container {
+
+/* Make sure the body uses full height and centers everything */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* prevent scroll */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1000px;
-  min-height: 10vh; 
-  margin: auto; /* Centers horizontally */
-  background: var(--white);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(245, 245, 239, 0.33);
+  font-family: var(--font-family);
+}
+
+/* Container for the form */
+.custom-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 95%; /* Wider width */
+  max-width: 1400px; /* You can adjust this number to control max width */
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 /* Left Section */
@@ -31,7 +46,7 @@ body {
   width: 127.68px;
   height: 120px;
   position: absolute;
-  top: 2px;
+  top: 4%;
 }
 
 .custom-illustration img {
@@ -100,24 +115,15 @@ form {
   font-family: var(--font-family);
   gap: 20px;
 }
-.input-length{
-    width: 95.3%;
-}
-.input-row1{
-    display: flex;
-    gap: 50px;
-    width: 95.3%;
-  }
-  .input-row1 input{
-    text-align: center;
-  }
-.input-row2 {
+
+.input-row {
   display: flex;
   gap: 50px;
 }
-.input-row2 input{
-    text-align: center;
+.input-row input {
+  text-align: center;
 }
+
 label {
   font-size: var(--font-size-medium);
 }
@@ -132,58 +138,58 @@ select {
   background: var(--white);
   font-family: var(--font-family);
 }
-select{
-    text-align: center;
+select {
+  text-align: center;
 }
-
 .custom-select {
   appearance: none;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="black"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="black"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat right 10px center;
   background-size: 16px;
   padding-right: 30px;
 }
 
 .custom-register-btn {
-    width: 232px;
-    height: 49px;
-    background: var(--accent-color);
-    border-radius: 36px;
-    border: none;
-    color: var(--white);
-    font-size: var(--font-size-medium);
-    font-weight: 400;
-    margin-top: 20px;
-    margin-left: auto;
-    cursor: pointer;
-  }
+  width: 232px;
+  height: 49px;
+  background: var(--accent-color);
+  border-radius: 36px;
+  border: none;
+  color: var(--white);
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  margin-top: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
 
-  .custom-eye-btn {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #000;
-    font-weight: bold;
-    font-size: 20px;
-  }
+.custom-eye-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+}
 
-  .custom-input-group {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
+.custom-input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
-  /* Account Type Section */
+/* Account Type Section */
 .account-type {
   margin-top: 15px;
 }
 
 .account-type label {
   font-size: var(--font-size-medium);
-  font-weight: bold;
-  color: var(--text-color);
+  font-weight: 200;
+  color: black;
   display: block;
   margin-bottom: 5px;
 }
@@ -236,4 +242,10 @@ select{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 1080px) {
+
+
 }
